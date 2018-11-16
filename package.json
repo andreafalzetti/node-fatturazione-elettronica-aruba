@@ -1,0 +1,16 @@
+{
+  "name": "node-fatturazione-elettronica-aruba",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Andrea Falzetti <andrea@falzetti.me>",
+  "license": "MIT",
+  "dependencies": {
+    "form-urlencoded": "^3.0.0",
+    "needle": "^2.2.4"
+  }
+}
