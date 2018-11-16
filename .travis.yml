@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - '10'
+
+deploy:
+  provider: npm
+  email: afalzetti@gmail.com
+  api_key:
+    secure: S1wLJibsDEFdUFethJ/vSN/lLj0YnPX2YThODRKZs4oOGDkpBKIV8dt6ucyNBSjyzjJe2wvnzABJc+5xIu/s5VFGHRiUWMMWpaf982odvcjZSTQ08R/yotCrAKs5x/yrx7zBlNnpsw0UY7LSG/s2ZHD5mn45F6wQQcrnj5ksN2seAAEkbkLmx4fXUN+Ybhft24U2R072zl3d/JIvyQCNX3F1Rt8Zfvha1gta7f//9mdLdBSA/cqMQGojCVWULveQyVJtR26pEON6X0beEhYxx88FeRWCZiEI2oUa0rgpJZnDSn8RXh7I0WyHTy6t9mDgeNUle3BH0zH7M6hEDdfYYvMPs8kFWxW2d5z/Bgev61abA9r76s+iBgL8p8kjBj2L6mQqZpYFSMi1o0IjhU5G8a5praE8MwMiQQGwtjpkb+yRiFh1mEqoQK+e7CVOZT3yDceleoYEd+VOGvjz+3YDxPawGxhLeg4mdja2LOgJSRWhyxZf2tZ8EQUJAP+sT7+sM2YtDJWvrLC4Bqy2J94TZ00D4DBmwtC8Dw023T5V+uGLT3UErQV2Co8PxXLlnePVMpD9Kl6p+n/gRdPKm84iC10mjZtoIcwOiAwt1w4sTcCcXrAJGyfIRuABbMbZIilQM0qY5cThIs5WSR6GSbjzS6YZqxfvTWqYktnabIq+bvs=
+  on:
+    tags: true
+    repo: andreafalzetti/node-fatturazione-elettronica-aruba
+
+notifications:
+  email:
+    recipients:
+    - andrea@falzetti.me
+    on_success: change
+    on_failure: always
