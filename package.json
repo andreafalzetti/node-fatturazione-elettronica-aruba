@@ -1,10 +1,12 @@
 {
   "name": "node-fatturazione-elettronica-aruba",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "lint": "eslint . || (echo \"Some errors may be fixable with \\`npm run lint-fix\\`\". && exit 1)",
+    "lint-fix": "eslint . --fix"
   },
   "keywords": [],
   "author": "Andrea Falzetti <andrea@falzetti.me>",
@@ -12,5 +14,17 @@
   "dependencies": {
     "form-urlencoded": "^3.0.0",
     "needle": "^2.2.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.2"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }
