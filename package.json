@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "Andrea Falzetti <andrea@falzetti.me>",
-  "license": "MIT",
+  "license": "MPL-2.0",
   "dependencies": {
     "form-urlencoded": "^3.0.0",
     "needle": "^2.2.4"
