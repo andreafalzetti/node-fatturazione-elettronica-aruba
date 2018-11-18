@@ -2,9 +2,9 @@
   "name": "node-fatturazione-elettronica-aruba",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "eslint . || (echo \"Some errors may be fixable with \\`npm run lint-fix\\`\". && exit 1)",
     "lint-fix": "eslint . --fix"
   },
@@ -13,6 +13,7 @@
   "license": "MPL-2.0",
   "dependencies": {
     "form-urlencoded": "^3.0.0",
+    "joi": "^14.0.6",
     "needle": "^2.2.4"
   },
   "devDependencies": {
