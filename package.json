@@ -17,6 +17,7 @@
     "needle": "^2.2.4"
   },
   "devDependencies": {
+    "documentation": "^8.1.2",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.3.0",
