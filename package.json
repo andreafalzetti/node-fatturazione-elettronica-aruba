@@ -1,5 +1,5 @@
 {
-  "name": "node-fatturazione-elettronica-aruba",
+  "name": "fatturazione-elettronica-aruba",
   "version": "0.0.2",
   "description": "",
   "main": "lib/index.js",
