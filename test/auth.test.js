@@ -1,6 +1,6 @@
 const needle = require('needle');
 const arubaAuth = require('../lib/auth')({
-  endpoints: { auth: 'https://foo.bar' }
+  endpoints: { auth: { url: 'https://foo.bar', httpOptions: {} } }
 });
 
 jest.mock('needle');
@@ -15,6 +15,7 @@ describe('arubaAuth', () => {
         }
       };
       needle.mockResolvedValue(resp);
+
       const res = await arubaAuth.signIn({ username: 'foo', password: 'bar' });
       expect(res).toEqual({
         error_description: 'The user name or password is incorrect.',
