@@ -29,5 +29,12 @@
   },
   "prettier": {
     "singleQuote": true
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba"
+  },
+  "bugs": {
+    "url": "https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/issues"
   }
 }
