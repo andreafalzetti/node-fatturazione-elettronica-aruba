@@ -1,6 +1,6 @@
 {
   "name": "fatturazione-elettronica-aruba",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "Andrea Falzetti <andrea@falzetti.me>",
-  "license": "MPL-2.0",
+  "license": "MIT",
   "dependencies": {
     "form-urlencoded": "^3.0.0",
     "joi": "^14.0.6",
