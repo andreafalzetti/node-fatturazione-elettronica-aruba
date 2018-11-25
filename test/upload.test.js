@@ -25,7 +25,7 @@ const loadSamples = async () => {
   return invoices;
 };
 
-describe.only('upload', () => {
+describe('upload', () => {
   beforeAll(async () => {
     samples = await loadSamples();
   });
@@ -78,7 +78,7 @@ describe.only('upload', () => {
     });
   });
 
-  it.only('should return the "uploadFileName" when the invoice is uploaded successfully', async () => {
+  it('should return the "uploadFileName" when the invoice is uploaded successfully', async () => {
     const resp = {
       statusCode: 200,
       body: {
