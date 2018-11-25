@@ -1,11 +1,8 @@
 # fatturazione-elettronica-aruba
 
 ![build](https://api.travis-ci.org/andreafalzetti/node-fatturazione-elettronica-aruba.svg?branch=master)
-![License][license-image]][license-url]
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
-[license-url]: https://opensource.org/licenses/MIT
-
-[license-image]: https://img.shields.io/npm/l/make-coverage-badge.svg
 
 ## This project is work in progress
 
@@ -80,7 +77,7 @@ ArubaClient constructor
 
 #### Parameters
 
--   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** 
+-   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?**
     -   `options.env` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Aruba environment (demo or prod)
 
 Returns **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Returns an instance of ArubaClient
@@ -91,7 +88,7 @@ Calls Aruba to generate a JWT that will be used for future calls
 
 ##### Parameters
 
--   `data` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+-   `data` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)**
     -   `data.username` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Aruba username
     -   `data.password` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Aruba password
 
