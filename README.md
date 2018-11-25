@@ -1,13 +1,13 @@
-# fatturazione-elettronica-aruba &middot; [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) ![build](https://api.travis-ci.org/andreafalzetti/node-fatturazione-elettronica-aruba.svg?branch=master) [![npm version](https://img.shields.io/npm/v/fatturazione-elettronica-aruba.svg?style=flat)](https://www.npmjs.com/package/node-fatturazione-elettronica-aruba) [![Coverage Status](https://coveralls.io/repos/github/andreafalzetti/node-fatturazione-elettronica-aruba/badge.svg?branch=master)](https://coveralls.io/github/andreafalzetti/node-fatturazione-elettronica-aruba?branch=master)
+# fatturazione-elettronica-aruba · [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) ![build](https://api.travis-ci.org/andreafalzetti/node-fatturazione-elettronica-aruba.svg?branch=master) [![npm version](https://img.shields.io/npm/v/fatturazione-elettronica-aruba.svg?style=flat)](https://www.npmjs.com/package/node-fatturazione-elettronica-aruba) [![Coverage Status](https://coveralls.io/repos/github/andreafalzetti/node-fatturazione-elettronica-aruba/badge.svg?branch=master)](https://coveralls.io/github/andreafalzetti/node-fatturazione-elettronica-aruba?branch=master)
 
+Node.js client to integrate the Aruba API for electronic invoicing ("Fatturazione Elettronica") within your project.
 
-## This project is work in progress
-
-Module to easily integrate the Aruba API for electronic invoicing ("Fatturazione Elettronica") with your project.
+Currently in beta version and under development. The API should be stable and you can start using it.
 
 ## Roadmap
 
--   Add upload invoice
+-   Complete support for Notifications
+-   Implement MonitorCheck API
 
 ## Links
 
@@ -74,7 +74,7 @@ ArubaClient constructor
 
 #### Parameters
 
--   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?**
+-   `options` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** 
     -   `options.env` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** Aruba environment (demo or prod)
 
 Returns **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Returns an instance of ArubaClient
@@ -85,7 +85,7 @@ Calls Aruba to generate a JWT that will be used for future calls
 
 ##### Parameters
 
--   `data` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)**
+-   `data` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
     -   `data.username` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Aruba username
     -   `data.password` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Aruba password
 
