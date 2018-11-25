@@ -1,3 +1,7 @@
+## 0.0.7 (November 25, 2018)
+
+* Change Software License from MPL2.0 to MIT
+
 ## 0.0.6 (November 25, 2018)
 
 * Implement `upload` invoice Aruba API
