@@ -1,5 +1,14 @@
 # fatturazione-elettronica-aruba
 
+
+
+![build](https://api.travis-ci.org/andreafalzetti/node-fatturazione-elettronica-aruba.svg?branch=master)
+![License][license-image]][license-url]
+
+[license-url]: https://opensource.org/licenses/MIT
+[license-image]: https://img.shields.io/npm/l/make-coverage-badge.svg
+
+
 ## This project is work in progress
 
 Module to easily integrate the Aruba API for electronic invoicing ("Fatturazione Elettronica") with your project.

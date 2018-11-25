@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:FatturaElettronica
+  versione="FPR12" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2 fatturaordinaria_v1.2.xsd" xmlns:p="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2">
+  <FatturaElettronicaHeader>
+    <DatiTrasmissione>
+      <IdTrasmittente>
+        <IdPaese>IT</IdPaese>
+        <IdCodice>01879020517</IdCodice>
+      </IdTrasmittente>
+      <ProgressivoInvio>00005</ProgressivoInvio>
+      <FormatoTrasmissione>FPR12</FormatoTrasmissione>
+      <CodiceDestinatario>0000000</CodiceDestinatario>
+    </DatiTrasmissione>
+    <CedentePrestatore>
+      <DatiAnagrafici>
+        <IdFiscaleIVA>
+          <IdPaese>IT</IdPaese>
+          <IdCodice>00000000016</IdCodice>
+        </IdFiscaleIVA>
+        <CodiceFiscale>00000000016</CodiceFiscale>
+        <Anagrafica>
+          <Denominazione>Calzature e Pelletteria "Pierre"</Denominazione>
+        </Anagrafica>
+        <RegimeFiscale>RF01</RegimeFiscale>
+      </DatiAnagrafici>
+      <Sede>
+        <Indirizzo>Corso Trieste e Trento, 45</Indirizzo>
+        <CAP>70011</CAP>
+        <Comune>Alberobello</Comune>
+        <Provincia>BA</Provincia>
+        <Nazione>IT</Nazione>
+      </Sede>
+      <Contatti>
+        <Telefono>080/4322393</Telefono>
+        <Fax>080/4322393</Fax>
+        <Email>foo@bar.xxx</Email>
+      </Contatti>
+    </CedentePrestatore>
+    <CessionarioCommittente>
+      <DatiAnagrafici>
+        <CodiceFiscale>PRRGPP95T11F915D</CodiceFiscale>
+        <Anagrafica>
+          <Denominazione>Giuseppe Pierro</Denominazione>
+        </Anagrafica>
+      </DatiAnagrafici>
+      <Sede>
+        <Indirizzo>Via Gramsci, 26</Indirizzo>
+        <CAP>70011</CAP>
+        <Comune>Alberobello</Comune>
+        <Provincia>BA</Provincia>
+        <Nazione>IT</Nazione>
+      </Sede>
+    </CessionarioCommittente>
+  </FatturaElettronicaHeader>
+  <FatturaElettronicaBody>
+    <DatiGenerali>
+      <DatiGeneraliDocumento>
+        <TipoDocumento>TD01</TipoDocumento>
+        <Divisa>EUR</Divisa>
+        <Data>2018-07-13</Data>
+        <Numero>2/A</Numero>
+        <ImportoTotaleDocumento>39.92</ImportoTotaleDocumento>
+      </DatiGeneraliDocumento>
+    </DatiGenerali>
+    <DatiBeniServizi>
+      <DettaglioLinee>
+        <NumeroLinea>1</NumeroLinea>
+        <CodiceArticolo>
+          <CodiceTipo>INTERNO</CodiceTipo>
+          <CodiceValore>SM43006</CodiceValore>
+        </CodiceArticolo>
+        <Descrizione>Sandalo</Descrizione>
+        <Quantita>1.00</Quantita>
+        <UnitaMisura>Pz</UnitaMisura>
+        <PrezzoUnitario>40.90</PrezzoUnitario>
+        <ScontoMaggiorazione>
+          <Tipo>SC</Tipo>
+          <Percentuale>20.00</Percentuale>
+        </ScontoMaggiorazione>
+        <PrezzoTotale>32.72</PrezzoTotale>
+        <AliquotaIVA>22.00</AliquotaIVA>
+      </DettaglioLinee>
+      <DatiRiepilogo>
+        <AliquotaIVA>22.00</AliquotaIVA>
+        <ImponibileImporto>32.72</ImponibileImporto>
+        <Imposta>7.20</Imposta>
+        <EsigibilitaIVA>D</EsigibilitaIVA>
+      </DatiRiepilogo>
+    </DatiBeniServizi>
+  </FatturaElettronicaBody>
+</p:FatturaElettronica>
