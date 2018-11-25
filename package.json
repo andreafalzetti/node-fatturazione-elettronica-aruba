@@ -4,7 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "eslint . || (echo \"Some errors may be fixable with \\`npm run lint-fix\\`\". && exit 1)",
     "lint-fix": "eslint . --fix"
   },
@@ -17,6 +17,7 @@
     "needle": "^2.2.4"
   },
   "devDependencies": {
+    "coveralls": "^3.0.2",
     "documentation": "^8.1.2",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -31,8 +32,8 @@
     "singleQuote": true
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba"
+    "type": "git",
+    "url": "https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba"
   },
   "bugs": {
     "url": "https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/issues"

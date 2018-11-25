@@ -1,8 +1,4 @@
-# fatturazione-elettronica-aruba
-
-![build](https://api.travis-ci.org/andreafalzetti/node-fatturazione-elettronica-aruba.svg?branch=master)
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-[![Coverage Status](https://coveralls.io/repos/github/andreafalzetti/node-fatturazione-elettronica-aruba/badge.svg?branch=master)](https://coveralls.io/github/andreafalzetti/node-fatturazione-elettronica-aruba?branch=master)
+# fatturazione-elettronica-aruba &middot; [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) ![build](https://api.travis-ci.org/andreafalzetti/node-fatturazione-elettronica-aruba.svg?branch=master) [![npm version](https://img.shields.io/npm/v/fatturazione-elettronica-aruba.svg?style=flat)](https://www.npmjs.com/package/node-fatturazione-elettronica-aruba) [![Coverage Status](https://coveralls.io/repos/github/andreafalzetti/node-fatturazione-elettronica-aruba/badge.svg?branch=master)](https://coveralls.io/github/andreafalzetti/node-fatturazione-elettronica-aruba?branch=master)
 
 
 ## This project is work in progress
