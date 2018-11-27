@@ -163,6 +163,11 @@ describe('upload', () => {
     expect(upload({ dataFile: samples.ok }, options)).rejects.toThrowError();
   });
 
+  it('should should throw if no params are passed', async () => {
+    const res = upload();
+    expect(res).rejects.toThrow();
+  });
+
   describe('composeUrl', () => {
     it('should return /services/invoice/upload', async () => {
       const url = composeUrl(config)();

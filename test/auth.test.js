@@ -58,6 +58,11 @@ describe('arubaAuth', () => {
       });
       expect(res).toEqual(Object.assign(resp.body, { success: true }));
     });
+
+    it('should should throw if no params are passed', async () => {
+      const res = arubaAuth.signIn();
+      expect(res).rejects.toThrow();
+    });
   });
 
   describe('refreshToken', () => {
@@ -75,6 +80,11 @@ describe('arubaAuth', () => {
       expect(
         arubaAuth.refreshToken({ refresh_token: 'foo' })
       ).rejects.toThrowError();
+    });
+
+    it('should should throw if no params are passed', async () => {
+      const res = arubaAuth.refreshToken();
+      expect(res).rejects.toThrow();
     });
 
     it('should return a new access_token', async () => {
