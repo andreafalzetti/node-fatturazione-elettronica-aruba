@@ -2,8 +2,13 @@ language: node_js
 node_js:
   - '10'
 
+before_install:
+  - sudo apt-get update -y
+  - npm install -g npm@latest
+
 before_script:
   - npm install
+
 script:
   - npm test
   - npm run lint
