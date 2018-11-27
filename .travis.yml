@@ -7,7 +7,8 @@ before_script:
 script:
   - npm test
   - npm run lint
-  - npm run 
+  - npm run
+  - npm audit
 
 deploy:
   provider: npm
