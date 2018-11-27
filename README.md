@@ -1,54 +1,50 @@
-# fatturazione-elettronica-aruba · [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) ![build](https://api.travis-ci.org/andreafalzetti/node-fatturazione-elettronica-aruba.svg?branch=master) [![npm version](https://img.shields.io/npm/v/fatturazione-elettronica-aruba.svg?style=flat)](https://www.npmjs.com/package/fatturazione-elettronica-aruba) [![Coverage Status](https://coveralls.io/repos/github/andreafalzetti/node-fatturazione-elettronica-aruba/badge.svg?branch=master)](https://coveralls.io/github/andreafalzetti/node-fatturazione-elettronica-aruba?branch=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
+# fatturazione-elettronica-aruba
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) ![build](https://api.travis-ci.org/andreafalzetti/node-fatturazione-elettronica-aruba.svg?branch=master) [![npm version](https://img.shields.io/npm/v/fatturazione-elettronica-aruba.svg?style=flat)](https://www.npmjs.com/package/fatturazione-elettronica-aruba) [![Coverage Status](https://coveralls.io/repos/github/andreafalzetti/node-fatturazione-elettronica-aruba/badge.svg?branch=master)](https://coveralls.io/github/andreafalzetti/node-fatturazione-elettronica-aruba?branch=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
 
 Node.js client to integrate the Aruba API for electronic invoicing ("Fatturazione Elettronica") within your project.
 
-Currently in beta version and under development. The API should be stable and you can start using it.
+Currently in beta version and under development until Aruba releases a final version of their API. The API of this module should be stable and you can start using it.
 
 ## Roadmap
 
 -   Complete support for Notifications
 -   Implement MonitorCheck API
+-   Add any new feature introduces by Aruba last minute
 
 ## Links
 
-**Aruba API docs**
+* Aruba API docs: <https://fatturazioneelettronica.aruba.it/apidoc/docs.html>
+* npm: <https://www.npmjs.com/package/fatturazione-elettronica-aruba>
 
-<https://fatturazioneelettronica.aruba.it/apidoc/docs.html>
+## Requirements
+
+This module calls the Aruba Fatturazione Elettronica API, therefore you need a valid set of credentials with their service in order to use this module.
+
+## Install
+
+```
+npm install fatturazione-elettronica-aruba
+```
+
+## How to use
+
+```js
+const ArubaClient = require('fatturazione-elettronica-aruba');
+
+const arubaClient = new ArubaClient();
+
+await arubaClient.signIn({
+  username: 'YOUR_ARUBA_USERNAME',
+  password: 'YOUR_ARUBA_PASSWORD'
+});
+
+await arubaClient.uploadInvoice({ dataFile: 'BASE64_ENCODED_XML' });
+```
 
 ## Examples
 
-Connecting to the demo environment and searching for all invoices:
-
-```javascript
-const ArubaClient = require('fatturazione-elettronica-aruba');
-
-const username = process.env.ARUBA_USERNAME;
-const password = process.env.ARUBA_PASSWORD;
-
-(async () => {
-  const arubaClient = new ArubaClient({ env: 'demo' });
-
-  const auth = await arubaClient.signIn({ username, password });
-
-  if (auth && auth.error) {
-    console.log('Cannot sign in', auth);
-  }
-
-  // You are signed in now
-
-  await arubaClient.refreshToken(); // because why not
-
-  // Search for all the invoices sent by my user
-  const find = await arubaClient.searchInvoice({
-    type: 'sent',
-    findBy: 'username',
-    username,
-    size: 20 // page size
-  });
-
-  console.log(find.data.content); // array of invoices
-})();
-```
+See the [examples](EXAMPLES.md) page for additional use cases and demos.
 
 ## API
 
