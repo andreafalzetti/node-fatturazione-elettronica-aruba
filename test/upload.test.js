@@ -78,6 +78,11 @@ describe('upload', () => {
     });
   });
 
+  it('should throw is "dataFile" is missing', async () => {
+    const res = upload({}, options);
+    expect(res).rejects.toThrow();
+  });
+
   it('should return the "uploadFileName" when the invoice is uploaded successfully', async () => {
     const resp = {
       statusCode: 200,
@@ -98,6 +103,29 @@ describe('upload', () => {
       errorCode: '0000',
       errorDescription: null,
       uploadFileName: 'IT01879020517_aaa6r.xml.p7m'
+    });
+  });
+
+  it('should allow the upload of signed invoices', async () => {
+    const resp = {
+      statusCode: 200,
+      body: {
+        uploadFileName: 'IT01879020517_aabcb.xml.p7m',
+        errorCode: '0000',
+        errorDescription: null
+      }
+    };
+
+    needle.mockResolvedValue(resp);
+
+    const res = await upload({ signed: true, dataFile: samples.ok }, options);
+
+    expect(res).toEqual({
+      statusCode: 200,
+      success: true,
+      errorCode: '0000',
+      errorDescription: null,
+      uploadFileName: 'IT01879020517_aabcb.xml.p7m'
     });
   });
 
@@ -125,6 +153,14 @@ describe('upload', () => {
       errorCode: '0012',
       errorDescription: 'Errore autenticazione'
     });
+  });
+
+  it('should throw an error when there is a network failure', async () => {
+    const error = new Error('Network failure');
+    needle.mockImplementation(() => {
+      throw error;
+    });
+    expect(upload({ dataFile: samples.ok }, options)).rejects.toThrowError();
   });
 
   describe('composeUrl', () => {

@@ -1,3 +1,9 @@
+## 0.0.8 (November 27, 2018)
+
+* Increase security in CI/CD pipeline
+* Docs: add EXAMPLES.md page
+* Improve code coverage
+
 ## 0.0.7 (November 25, 2018)
 
 * Change Software License from MPL2.0 to MIT
