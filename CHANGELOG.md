@@ -1,3 +1,8 @@
+## 0.0.9 (December 28, 2018)
+
+* Add more unit tests
+* Fix HTTP issue (set `{ json: false }` in needle prod requests)
+
 ## 0.0.8 (November 27, 2018)
 
 * Increase security in CI/CD pipeline
