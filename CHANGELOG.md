@@ -1,3 +1,7 @@
+## 0.0.10 (December 31, 2018)
+
+* Add environment variables to override Aruba endpoints
+
 ## 0.0.9 (December 28, 2018)
 
 * Add more unit tests
