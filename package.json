@@ -20,14 +20,14 @@
   "devDependencies": {
     "coveralls": "^3.0.2",
     "documentation": "^9.1.1",
-    "eslint": "^5.9.0",
+    "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jest": "^22.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.2.2",
     "eslint-plugin-prettier": "^3.0.0",
-    "jest": "^24.0.0",
-    "prettier": "^1.15.2"
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4"
   },
   "prettier": {
     "singleQuote": true
