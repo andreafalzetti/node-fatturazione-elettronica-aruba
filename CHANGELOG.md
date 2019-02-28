@@ -1,3 +1,7 @@
+## 0.0.12 (February 28, 2019)
+
+* Fix Content-Type Aruba new checks bug
+
 ## 0.0.10 (December 31, 2018)
 
 * Add environment variables to override Aruba endpoints
