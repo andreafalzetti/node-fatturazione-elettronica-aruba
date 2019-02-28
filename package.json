@@ -1,6 +1,6 @@
 {
   "name": "fatturazione-elettronica-aruba",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -15,6 +15,7 @@
   "dependencies": {
     "form-urlencoded": "^3.0.0",
     "joi": "^14.0.6",
+    "lodash.merge": "^4.6.1",
     "needle": "^2.2.4"
   },
   "devDependencies": {
