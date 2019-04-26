@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
-    "documentation": "^9.1.1",
+    "documentation": "^10.1.0",
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.0.0",
