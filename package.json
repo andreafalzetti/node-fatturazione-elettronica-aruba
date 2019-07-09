@@ -13,22 +13,22 @@
   "author": "Andrea Falzetti <andrea@falzetti.me>",
   "license": "MIT",
   "dependencies": {
-    "form-urlencoded": "^3.0.0",
+    "form-urlencoded": "^3.0.1",
     "joi": "^14.0.6",
     "lodash.merge": "^4.6.1",
     "needle": "^2.4.0"
   },
   "devDependencies": {
-    "coveralls": "^3.0.2",
-    "documentation": "^11.0.0",
-    "eslint": "^5.13.0",
-    "eslint-config-airbnb-base": "^13.1.0",
+    "coveralls": "^3.0.4",
+    "documentation": "^11.0.1",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.2.0",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.7.2",
     "eslint-plugin-prettier": "^3.0.0",
     "jest": "^24.1.0",
-    "prettier": "^1.16.4"
+    "prettier": "^1.18.2"
   },
   "prettier": {
     "singleQuote": true
