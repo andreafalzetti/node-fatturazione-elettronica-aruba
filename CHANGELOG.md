@@ -1,3 +1,9 @@
+# Changelog
+
+## 0.0.14 (July 10, 2019)
+
+* Update node dependencies
+
 ## 0.0.12 (February 28, 2019)
 
 * Fix Content-Type Aruba new checks bug
