@@ -5,8 +5,6 @@
 
 Node.js client to integrate the Aruba API for electronic invoicing ("Fatturazione Elettronica") within your project.
 
-Currently in beta version and under development until Aruba releases a final version of their API. The API of this module should be stable and you can start using it.
-
 ## Roadmap
 
 -   Complete support for Notifications
@@ -131,6 +129,10 @@ Calls Aruba to upload an invoice
     -   `data.domain` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** signature domain (leave false if you are not sure)
 
 Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** Resolves with the uploadFileName if successfull
+
+## Disclaimer
+
+This is a community driven open-source module.
 
 ## License
 
