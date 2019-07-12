@@ -39,5 +39,11 @@
   },
   "bugs": {
     "url": "https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
