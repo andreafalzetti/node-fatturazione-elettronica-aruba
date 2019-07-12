@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.15 (July 12, 2019)
+
+* Update node dependencies
+
 ## 0.0.14 (July 10, 2019)
 
 * Update node dependencies
