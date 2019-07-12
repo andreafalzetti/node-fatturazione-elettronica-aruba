@@ -1,3 +1,7 @@
+## [0.0.16](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.0.15...0.0.16) (2019-07-12)
+
+
+
 ## [0.0.15](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.0.14...0.0.15) (2019-07-12)
 
 
