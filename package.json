@@ -8,7 +8,7 @@
     "lint": "eslint . || (echo \"Some errors may be fixable with \\`npm run lint-fix\\`\". && exit 1)",
     "lint-fix": "eslint . --fix",
     "generate-doc": "documentation readme ./lib/index.js --section=API --shallow",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md && git commit -m 'docs: update CHANGELOG'"
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "keywords": [],
   "author": "Andrea Falzetti <andrea@falzetti.me>",
