@@ -1,7 +1,7 @@
 # fatturazione-elettronica-aruba
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.org/andreafalzetti/node-fatturazione-elettronica-aruba.svg?branch=master)](https://travis-ci.org/andreafalzetti/node-fatturazione-elettronica-aruba) [![npm version](https://img.shields.io/npm/v/fatturazione-elettronica-aruba.svg?style=flat)](https://www.npmjs.com/package/fatturazione-elettronica-aruba) [![Coverage Status](https://coveralls.io/repos/github/andreafalzetti/node-fatturazione-elettronica-aruba/badge.svg?branch=master&service=github)](https://coveralls.io/github/andreafalzetti/node-fatturazione-elettronica-aruba?branch=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fandreafalzetti%2Fnode-fatturazione-elettronica-aruba.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fandreafalzetti%2Fnode-fatturazione-elettronica-aruba?ref=badge_shield)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fandreafalzetti%2Fnode-fatturazione-elettronica-aruba.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fandreafalzetti%2Fnode-fatturazione-elettronica-aruba?ref=badge_shield) [![Known Vulnerabilities](https://snyk.io//test/github/andreafalzetti/node-fatturazione-elettronica-aruba/badge.svg?targetFile=package.json)](https://snyk.io//test/github/andreafalzetti/node-fatturazione-elettronica-aruba?targetFile=package.json)
 
 Node.js client to integrate the Aruba API for electronic invoicing ("Fatturazione Elettronica") within your project.
 
