@@ -14,7 +14,7 @@
   "author": "Andrea Falzetti <andrea@falzetti.me>",
   "license": "MIT",
   "dependencies": {
-    "form-urlencoded": "^3.0.1",
+    "form-urlencoded": "^4.0.0",
     "joi": "^14.0.6",
     "lodash.merge": "^4.6.1",
     "needle": "^2.4.0"
