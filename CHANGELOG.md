@@ -1,3 +1,13 @@
+<a name="0.0.18"></a>
+## [0.0.18](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.0.17...0.0.18) (2019-10-11)
+
+
+### Features
+
+* audit fix ([d7daad9](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/commit/d7daad9))
+
+
+
 ## [0.0.16](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.0.15...0.0.16) (2019-07-12)
 
 
