@@ -13,7 +13,7 @@ Node.js client to integrate the Aruba API for electronic invoicing ("Fatturazion
 
 ## Links
 
-* Aruba API docs: <https://fatturazioneelettronica.aruba.it/apidoc/docs.html>
+* Aruba API docs: <https://fatturazioneelettronica.aruba.it/apidoc/docs_EN.html>
 * npm: <https://www.npmjs.com/package/fatturazione-elettronica-aruba>
 
 ## Requirements
