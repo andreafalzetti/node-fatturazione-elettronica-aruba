@@ -14,7 +14,7 @@
   "author": "Andrea Falzetti <andrea@falzetti.me>",
   "license": "MIT",
   "dependencies": {
-    "form-urlencoded": "^4.0.0",
+    "form-urlencoded": "^4.1.0",
     "joi": "^14.0.6",
     "lodash.merge": "^4.6.1",
     "needle": "^2.4.0"
@@ -25,16 +25,16 @@
     "conventional-changelog": "^3.1.10",
     "conventional-changelog-cli": "^2.0.23",
     "coveralls": "^3.0.4",
-    "documentation": "^12.0.0",
-    "eslint": "^6.0.1",
+    "documentation": "^12.1.3",
+    "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jest": "^22.7.2",
+    "eslint-plugin-jest": "^23.0.3",
     "eslint-plugin-prettier": "^3.0.0",
-    "husky": "^3.0.0",
+    "husky": "^3.0.9",
     "jest": "^24.1.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.19.1"
   },
   "prettier": {
     "singleQuote": true
