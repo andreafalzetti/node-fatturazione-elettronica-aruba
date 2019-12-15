@@ -1,3 +1,20 @@
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.0.20...0.1.0) (2019-12-15)
+
+
+### Features
+
+* trigger release ([e13b44d](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/commit/e13b44d))
+
+
+
+# [0.1.0](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.0.20...0.1.0) (2019-12-15)
+
+
+### Features
+
+* trigger release ([e13b44d](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/commit/e13b44dc5e453272151f7dc4e38176cc2c2e80a1))
+
 <a name="0.0.20"></a>
 ## [0.0.20](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.0.19...0.0.20) (2019-11-09)
 
@@ -149,6 +166,3 @@
 * **test:** add jest and first unit test ([adf6361](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/commit/adf6361))
 * add eslint jest plugin ([ba980e7](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/commit/ba980e7))
 * initial commit ([67b8917](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/commit/67b8917))
-
-
-
