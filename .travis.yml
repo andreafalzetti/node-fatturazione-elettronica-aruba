@@ -10,7 +10,6 @@ script:
 - npm test
 - npm run lint
 - npm run
-- npm audit
 deploy:
   provider: npm
   email:
