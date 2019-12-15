@@ -1,3 +1,20 @@
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.1.0...0.1.1) (2019-12-15)
+
+
+### Bug Fixes
+
+* npm audit ([2bec1c4](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/commit/2bec1c4))
+
+
+
+## [0.1.1](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.1.0...0.1.1) (2019-12-15)
+
+
+### Bug Fixes
+
+* npm audit ([2bec1c4](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/commit/2bec1c46a3ee73f132e0d20f160a1fc34c309488))
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.0.20...0.1.0) (2019-12-15)
 
