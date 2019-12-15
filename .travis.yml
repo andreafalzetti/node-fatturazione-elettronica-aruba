@@ -5,11 +5,11 @@ before_install:
 - sudo apt-get update -y
 - npm install -g npm@latest
 before_script:
-- npm install
+- npm ci
 script:
 - npm test
 - npm run lint
-- npm run
+- npx semantic-release
 deploy:
   provider: npm
   email:
@@ -25,3 +25,7 @@ notifications:
     - andrea@falzetti.me
     on_success: change
     on_failure: always
+env:
+  global:
+  - secure: IgvTUNZ7ExQYxedKDQyZFIFfbqXONI39hNo6MoxvpeiqbQYrzVysZPqWauVYrEJs38Y01KRTrL+zEDQanDMT4jqTWW+YrVc3lC9V7DQY2Be4vbPhNevAVAoV0bLwyx6uoHqsw+JpvBULPbVU+HT3RyeeDujr18JRLgMDn1ve/vFgNleyioER3aKSirL7y8MDPRxawX6FHZdHxgE6djDr6sHDMFF+4F/OPaPByw++lqQ9KglJIlOEWJU8M++ItrZxr9kdawobzW88gRuGFcy5E7Us4wRUSA+4jftS5HccHJfoK1kx7NSpBsQZGibzFcUJk3LkIo1i9jMhyaivz/AY77SiqmhM9vT5+X249rQN/IOjzrchK6I9jbtcrVK4Hvo3OMnRk+9FG3AQG8YcvaGjw0Qs875sifRotWW/+shMlZLsLM4m9M1y0UKl+mhM11iS9A2LmDcdUnXMiEGBxpL4UQ8EeL4mPACQ0yRw6VVsCAlOWF158H9TwcKs/QCwOP6sRRMTWN0O7gTvN9z7hudFFuLfaDHlg9TogKzo2GhsRZgYk1O3/d+nZivbRo0R81MA+PgDx5hsO1mglD5PVyDREMQSJSyf/EZXHDszeFhf7KirsreNlcxyvMuYc57F/s3qOtPsGVfGOuPFEEX4KZWM+Qbq+9Cu0y/n4IjJPxb5kDU=
+  - secure: dBRdeaVqR79NR/dkrw+XMZ6wbnRG01Daty8F3Gs9e9TZ3nQa7oaS5RdmVJUUnBHd+buPSeNHd02LB7GG54C1GrQPflJKRnyl6wxb8ygrXWLi4Y1NgcXmhIDAQNWeg4PSJhJ3YXOTsJrmkQ2BMIEef7nIkMGesUp1WVz9AmWzv6RHRooYEljQxbEAPWgK6Z+kOnq+CCwqD4OCx9+Q22Xd8jt0F27I5TMTpEnMflqcr4x/ckI85q9Yi2XP2z8aBCNvRqAO4lnw93F/4q1C03ITGnbyBW6oa45VndVS1DEe0dxrzAhSNl3Z05cfvjGWyzeQvoPrUdbltzch1YhCmeNm7tezeyEAH3nafATmAyUib4RFicHk5qM8XH7DA6rZCndmv9b+VAgej5LTEJR/9JZQATCHdFQMKLeL0cEOYAhrzpQf08ZyI2unSwWUBWrVKFPVPD56+/tGQ8fjCO+gDsXjW+ITDptnzgJq1T9vLKT/bCexRnZA9dgyDyWH2UjuJuehm/xAMjqNBrcaXn3mGgy0UuIi3/ABY79C9m0JW4xD91gzUua3wgukpe4CZdgQFNS2TXiOjgR4j9ziLgFDsoIlNgFf4GRHk831V+KXGDyrKN3lCpsSaAlxoWGQt9+AdjounD4nAT1q1ROvCMxId0onXspgQMvEgwxQWfQUXzdsZj0=

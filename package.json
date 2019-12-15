@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "eslint . || (echo \"Some errors may be fixable with \\`npm run lint-fix\\`\". && exit 1)",
-    "lint-fix": "eslint . --fix",
+    "lint:fix": "eslint . --fix",
     "generate-doc": "documentation readme ./lib/index.js --section=API --shallow",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
@@ -20,6 +20,12 @@
     "needle": "^2.4.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/commit-analyzer": "^6.3.3",
+    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/github": "^5.5.5",
+    "@semantic-release/npm": "^5.1.13",
+    "@semantic-release/release-notes-generator": "^7.2.1",
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
     "conventional-changelog": "^3.1.10",
@@ -34,7 +40,8 @@
     "eslint-plugin-prettier": "^3.0.0",
     "husky": "^3.0.9",
     "jest": "^24.1.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "semantic-release": "^15.13.31"
   },
   "prettier": {
     "singleQuote": true
