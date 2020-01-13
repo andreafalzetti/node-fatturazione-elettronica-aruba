@@ -21,10 +21,10 @@
   },
   "devDependencies": {
     "@semantic-release/changelog": "^3.0.4",
-    "@semantic-release/commit-analyzer": "^6.3.3",
-    "@semantic-release/git": "^7.0.16",
-    "@semantic-release/github": "^5.5.5",
-    "@semantic-release/npm": "^5.1.13",
+    "@semantic-release/commit-analyzer": "^7.0.0",
+    "@semantic-release/git": "^8.0.0",
+    "@semantic-release/github": "^6.0.1",
+    "@semantic-release/npm": "^6.0.0",
     "@semantic-release/release-notes-generator": "^7.2.1",
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
@@ -41,7 +41,7 @@
     "husky": "^4.0.5",
     "jest": "^24.1.0",
     "prettier": "^1.19.1",
-    "semantic-release": "^15.13.31"
+    "semantic-release": "^16.0.1"
   },
   "prettier": {
     "singleQuote": true
