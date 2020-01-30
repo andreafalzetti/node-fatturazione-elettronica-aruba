@@ -24,7 +24,7 @@
     "@semantic-release/commit-analyzer": "^7.0.0",
     "@semantic-release/git": "^8.0.0",
     "@semantic-release/github": "^7.0.0",
-    "@semantic-release/npm": "^6.0.0",
+    "@semantic-release/npm": "^7.0.0",
     "@semantic-release/release-notes-generator": "^7.2.1",
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
