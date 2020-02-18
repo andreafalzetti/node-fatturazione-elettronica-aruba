@@ -46,9 +46,11 @@ describe('upload', () => {
     expect(res).toEqual({
       statusCode: 200,
       success: false,
-      uploadFileName: null,
-      errorCode: '0900',
-      errorDescription: 'AccessToken non valorizzato, key : Authorization'
+      data: {
+        uploadFileName: null,
+        errorCode: '0900',
+        errorDescription: 'AccessToken non valorizzato, key : Authorization'
+      }
     });
   });
 
@@ -72,9 +74,11 @@ describe('upload', () => {
     expect(res).toEqual({
       statusCode: 200,
       success: false,
-      uploadFileName: null,
-      errorCode: '0001',
-      errorDescription: 'Errore Generico'
+      data: {
+        uploadFileName: null,
+        errorCode: '0001',
+        errorDescription: 'Errore Generico'
+      }
     });
   });
 
@@ -149,9 +153,11 @@ describe('upload', () => {
     expect(res).toEqual({
       statusCode: 200,
       success: false,
-      uploadFileName: null,
-      errorCode: '0012',
-      errorDescription: 'Errore autenticazione'
+      data: {
+        uploadFileName: null,
+        errorCode: '0012',
+        errorDescription: 'Errore autenticazione'
+      }
     });
   });
 
