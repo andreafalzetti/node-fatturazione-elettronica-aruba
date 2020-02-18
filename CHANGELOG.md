@@ -1,3 +1,10 @@
+## [0.1.2](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.1.1...0.1.2) (2020-02-18)
+
+
+### Bug Fixes
+
+* remove unused npm script ([83fc6fd](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/commit/83fc6fd6a6c05519d3d376f62286a21beeaa9c58))
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.1.0...0.1.1) (2019-12-15)
 
