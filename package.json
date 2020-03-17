@@ -41,7 +41,7 @@
     "husky": "^4.0.5",
     "jest": "^25.1.0",
     "prettier": "^1.19.1",
-    "semantic-release": "^16.0.1"
+    "semantic-release": "^17.0.4"
   },
   "prettier": {
     "singleQuote": true
