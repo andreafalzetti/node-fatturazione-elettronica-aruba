@@ -20,14 +20,14 @@
     "needle": "^2.3.2"
   },
   "devDependencies": {
-    "@semantic-release/git": "^9.0.0",
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
     "@semantic-release/github": "^7.0.0",
     "@semantic-release/npm": "^7.0.3",
     "@semantic-release/release-notes-generator": "^9.0.1",
-    "@commitlint/cli": "^8.0.0",
-    "@commitlint/config-conventional": "^8.0.0",
     "conventional-changelog": "^3.1.10",
     "conventional-changelog-cli": "^2.0.23",
     "coveralls": "^3.0.4",
@@ -39,7 +39,7 @@
     "eslint-plugin-jest": "^23.0.3",
     "eslint-plugin-prettier": "^3.0.0",
     "husky": "^4.0.5",
-    "jest": "^25.1.0",
+    "jest": "^25.4.0",
     "prettier": "^2.0.4",
     "semantic-release": "^17.0.4"
   },
