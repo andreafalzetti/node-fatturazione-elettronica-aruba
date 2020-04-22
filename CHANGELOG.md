@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.1.2...0.2.0) (2020-04-22)
+
+
+### Features
+
+* npm audit fix ([41fcde7](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/commit/41fcde78769eed79f61d06a02b942c84037e66be))
+
 ## [0.1.2](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.1.1...0.1.2) (2020-02-18)
 
 
