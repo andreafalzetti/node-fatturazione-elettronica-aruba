@@ -3,7 +3,7 @@ const { getFattura } = require('./util');
 const composeUrl = require('../lib/upload/composeUrl');
 
 const config = {
-  endpoints: { api: { url: 'https://foo.bar', httpOptions: {} } }
+  endpoints: { api: { url: 'https://foo.bar', httpOptions: {} } },
 };
 
 const upload = require('../lib/upload/upload')(config);
@@ -36,8 +36,8 @@ describe('upload', () => {
       body: {
         uploadFileName: null,
         errorCode: '0900',
-        errorDescription: 'AccessToken non valorizzato, key : Authorization'
-      }
+        errorDescription: 'AccessToken non valorizzato, key : Authorization',
+      },
     };
 
     needle.mockResolvedValue(resp);
@@ -49,8 +49,8 @@ describe('upload', () => {
       data: {
         uploadFileName: null,
         errorCode: '0900',
-        errorDescription: 'AccessToken non valorizzato, key : Authorization'
-      }
+        errorDescription: 'AccessToken non valorizzato, key : Authorization',
+      },
     });
   });
 
@@ -60,8 +60,8 @@ describe('upload', () => {
       body: {
         uploadFileName: null,
         errorCode: '0001',
-        errorDescription: 'Errore Generico'
-      }
+        errorDescription: 'Errore Generico',
+      },
     };
 
     needle.mockResolvedValue(resp);
@@ -77,8 +77,8 @@ describe('upload', () => {
       data: {
         uploadFileName: null,
         errorCode: '0001',
-        errorDescription: 'Errore Generico'
-      }
+        errorDescription: 'Errore Generico',
+      },
     });
   });
 
@@ -93,8 +93,8 @@ describe('upload', () => {
       body: {
         uploadFileName: 'IT01879020517_aaa6r.xml.p7m',
         errorCode: '0000',
-        errorDescription: null
-      }
+        errorDescription: null,
+      },
     };
 
     needle.mockResolvedValue(resp);
@@ -106,7 +106,7 @@ describe('upload', () => {
       success: true,
       errorCode: '0000',
       errorDescription: null,
-      uploadFileName: 'IT01879020517_aaa6r.xml.p7m'
+      uploadFileName: 'IT01879020517_aaa6r.xml.p7m',
     });
   });
 
@@ -116,8 +116,8 @@ describe('upload', () => {
       body: {
         uploadFileName: 'IT01879020517_aabcb.xml.p7m',
         errorCode: '0000',
-        errorDescription: null
-      }
+        errorDescription: null,
+      },
     };
 
     needle.mockResolvedValue(resp);
@@ -129,7 +129,7 @@ describe('upload', () => {
       success: true,
       errorCode: '0000',
       errorDescription: null,
-      uploadFileName: 'IT01879020517_aabcb.xml.p7m'
+      uploadFileName: 'IT01879020517_aabcb.xml.p7m',
     });
   });
 
@@ -139,8 +139,8 @@ describe('upload', () => {
       body: {
         uploadFileName: null,
         errorCode: '0012',
-        errorDescription: 'Errore autenticazione'
-      }
+        errorDescription: 'Errore autenticazione',
+      },
     };
 
     needle.mockResolvedValue(resp);
@@ -156,8 +156,8 @@ describe('upload', () => {
       data: {
         uploadFileName: null,
         errorCode: '0012',
-        errorDescription: 'Errore autenticazione'
-      }
+        errorDescription: 'Errore autenticazione',
+      },
     });
   });
 

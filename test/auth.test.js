@@ -1,6 +1,6 @@
 const needle = require('needle');
 const arubaAuth = require('../lib/auth')({
-  endpoints: { auth: { url: 'https://foo.bar', httpOptions: {} } }
+  endpoints: { auth: { url: 'https://foo.bar', httpOptions: {} } },
 });
 
 jest.mock('needle');
@@ -11,8 +11,8 @@ describe('arubaAuth', () => {
       const resp = {
         body: {
           error: 'invalid_grant',
-          error_description: 'The user name or password is incorrect.'
-        }
+          error_description: 'The user name or password is incorrect.',
+        },
       };
       needle.mockResolvedValue(resp);
 
@@ -20,7 +20,7 @@ describe('arubaAuth', () => {
       expect(res).toEqual({
         error_description: 'The user name or password is incorrect.',
         error: 'invalid_grant',
-        success: false
+        success: false,
       });
     });
 
@@ -48,13 +48,13 @@ describe('arubaAuth', () => {
           userName: 'notarealuser',
           'as:client_id': 'Auth',
           '.issued': 'Sun, 18 Nov 2018 07:23:39 GMT',
-          '.expires': 'Sun, 18 Nov 2018 07:53:39 GMT'
-        }
+          '.expires': 'Sun, 18 Nov 2018 07:53:39 GMT',
+        },
       };
       needle.mockResolvedValue(resp);
       const res = await arubaAuth.signIn({
         username: 'notarealuser',
-        password: 'notarealpassword'
+        password: 'notarealpassword',
       });
       expect(res).toEqual(Object.assign(resp.body, { success: true }));
     });
@@ -97,12 +97,12 @@ describe('arubaAuth', () => {
           userName: 'notarealuser',
           'as:client_id': 'Auth',
           '.issued': 'Sun, 18 Nov 2018 07:23:39 GMT',
-          '.expires': 'Sun, 18 Nov 2018 07:53:39 GMT'
-        }
+          '.expires': 'Sun, 18 Nov 2018 07:53:39 GMT',
+        },
       };
       needle.mockResolvedValue(resp);
       const res = await arubaAuth.refreshToken({
-        refresh_token: 'abc123foo'
+        refresh_token: 'abc123foo',
       });
       expect(res).toEqual(Object.assign(resp.body, { success: true }));
     });

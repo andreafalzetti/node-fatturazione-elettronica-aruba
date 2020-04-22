@@ -2,7 +2,7 @@ const needle = require('needle');
 const composeUrl = require('../lib/search/composeUrl');
 
 const config = {
-  endpoints: { api: { url: 'https://foo.bar', httpOptions: {} } }
+  endpoints: { api: { url: 'https://foo.bar', httpOptions: {} } },
 };
 
 const arubaSearch = require('../lib/search/search')(config);
@@ -43,7 +43,7 @@ describe('arubaSearch', () => {
     it('should handle response correctly if Aruba returns 429 with HTML', async () => {
       const resp = {
         statusCode: 429,
-        body: `<html><head><title>Too many requests</title></head><body>Stop it</body></html>`
+        body: `<html><head><title>Too many requests</title></head><body>Stop it</body></html>`,
       };
 
       needle.mockResolvedValue(resp);
@@ -51,14 +51,14 @@ describe('arubaSearch', () => {
       const res = await arubaSearch({
         type: 'sent',
         findBy: 'id',
-        id: 'THE_INVOICE_ID'
+        id: 'THE_INVOICE_ID',
       });
       expect(res).toEqual({
         statusCode: 429,
         success: false,
         data:
           '<html><head><title>Too many requests</title></head><body>Stop it</body></html>',
-        error: 'Cannot fetch data'
+        error: 'Cannot fetch data',
       });
     });
 
@@ -68,7 +68,7 @@ describe('arubaSearch', () => {
       const res = await arubaSearch({
         type: 'sent',
         findBy: 'id',
-        id: 'THE_INVOICE_ID'
+        id: 'THE_INVOICE_ID',
       });
 
       expect(res).toHaveProperty('statusCode', 200);
@@ -88,7 +88,7 @@ describe('arubaSearch', () => {
         arubaSearch({
           type: 'sent',
           findBy: 'id',
-          id: 'THE_INVOICE_ID'
+          id: 'THE_INVOICE_ID',
         })
       ).rejects.toThrowError();
     });
