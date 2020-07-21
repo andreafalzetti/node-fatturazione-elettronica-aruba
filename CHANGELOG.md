@@ -1,3 +1,11 @@
+# [0.3.0](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.2.0...0.3.0) (2020-07-21)
+
+
+### Features
+
+* upgrade @hapi/joi ([ca76db2](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/commit/ca76db245179507631d8e534e27663004a19522a))
+* upgrade @hapi/joi ([9a6ec05](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/commit/9a6ec057e5bf5243b27060ea092852ec87878e61))
+
 # [0.2.0](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.1.2...0.2.0) (2020-04-22)
 
 
