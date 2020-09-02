@@ -33,7 +33,7 @@
     "conventional-changelog-cli": "^2.0.23",
     "coveralls": "^3.0.4",
     "documentation": "^13.0.2",
-    "eslint": "^6.6.0",
+    "eslint": "^7.8.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-import": "^2.18.0",
