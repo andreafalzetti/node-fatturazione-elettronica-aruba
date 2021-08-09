@@ -1,6 +1,6 @@
 # fatturazione-elettronica-aruba
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.org/andreafalzetti/node-fatturazione-elettronica-aruba.svg?branch=master)](https://travis-ci.org/andreafalzetti/node-fatturazione-elettronica-aruba) [![npm version](https://img.shields.io/npm/v/fatturazione-elettronica-aruba.svg?style=flat)](https://www.npmjs.com/package/fatturazione-elettronica-aruba) [![Coverage Status](https://coveralls.io/repos/github/andreafalzetti/node-fatturazione-elettronica-aruba/badge.svg?branch=master&service=github)](https://coveralls.io/github/andreafalzetti/node-fatturazione-elettronica-aruba?branch=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) [![Release](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/actions/workflows/on-push-master-release.yml/badge.svg)](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/actions/workflows/on-push-master-release.yml) [![npm version](https://img.shields.io/npm/v/fatturazione-elettronica-aruba.svg?style=flat)](https://www.npmjs.com/package/fatturazione-elettronica-aruba) [![Coverage Status](https://coveralls.io/repos/github/andreafalzetti/node-fatturazione-elettronica-aruba/badge.svg?branch=master&service=github)](https://coveralls.io/github/andreafalzetti/node-fatturazione-elettronica-aruba?branch=master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fandreafalzetti%2Fnode-fatturazione-elettronica-aruba.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fandreafalzetti%2Fnode-fatturazione-elettronica-aruba?ref=badge_shield) [![Known Vulnerabilities](https://snyk.io//test/github/andreafalzetti/node-fatturazione-elettronica-aruba/badge.svg?targetFile=package.json)](https://snyk.io//test/github/andreafalzetti/node-fatturazione-elettronica-aruba?targetFile=package.json) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 
@@ -52,17 +52,29 @@ See the [examples](EXAMPLES.md) page for additional use cases and demos.
 
 #### Table of Contents
 
--   [ArubaClient](#arubaclient)
-    -   [Parameters](#parameters)
-    -   [signIn](#signin)
-        -   [Parameters](#parameters-1)
-    -   [refreshToken](#refreshtoken)
-    -   [searchInvoice](#searchinvoice)
-        -   [Parameters](#parameters-2)
-    -   [getInvoiceNotifications](#getinvoicenotifications)
-        -   [Parameters](#parameters-3)
-    -   [uploadInvoice](#uploadinvoice)
-        -   [Parameters](#parameters-4)
+- [fatturazione-elettronica-aruba](#fatturazione-elettronica-aruba)
+  - [Roadmap](#roadmap)
+  - [Links](#links)
+  - [Requirements](#requirements)
+  - [Install](#install)
+  - [How to use](#how-to-use)
+  - [Examples](#examples)
+  - [API](#api)
+      - [Table of Contents](#table-of-contents)
+    - [ArubaClient](#arubaclient)
+      - [Parameters](#parameters)
+      - [signIn](#signin)
+        - [Parameters](#parameters-1)
+      - [refreshToken](#refreshtoken)
+      - [searchInvoice](#searchinvoice)
+        - [Parameters](#parameters-2)
+      - [getInvoiceNotifications](#getinvoicenotifications)
+        - [Parameters](#parameters-3)
+      - [uploadInvoice](#uploadinvoice)
+        - [Parameters](#parameters-4)
+  - [Disclaimer](#disclaimer)
+  - [License](#license)
+  - [Support on Beerpay](#support-on-beerpay)
 
 ### ArubaClient
 
