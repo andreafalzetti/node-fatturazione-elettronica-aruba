@@ -12,7 +12,8 @@
     "lint": "eslint . || (echo \"Some errors may be fixable with \\`npm run lint-fix\\`\". && exit 1)",
     "lint:fix": "eslint . --fix",
     "generate-doc": "documentation readme ./lib/index.js --section=API --shallow",
-    "build": "esbuild lib/index.js --bundle --outfile=dist/index.js --platform=node"
+    "build": "esbuild lib/index.js --bundle --outfile=dist/index.js --platform=node",
+    "release": "semantic-release"
   },
   "keywords": [],
   "author": "Andrea Falzetti <andrea@falzetti.me>",
