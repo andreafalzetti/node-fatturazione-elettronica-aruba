@@ -8,7 +8,8 @@
     "test:watch": "jest --watch",
     "lint": "eslint . || (echo \"Some errors may be fixable with \\`npm run lint-fix\\`\". && exit 1)",
     "lint:fix": "eslint . --fix",
-    "generate-doc": "documentation readme ./lib/index.js --section=API --shallow"
+    "generate-doc": "documentation readme ./lib/index.js --section=API --shallow",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "Andrea Falzetti <andrea@falzetti.me>",
@@ -53,11 +54,5 @@
   },
   "bugs": {
     "url": "https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/issues"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm test && npm run lint",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }
