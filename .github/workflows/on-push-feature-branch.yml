@@ -1,14 +1,13 @@
-# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: Node.js CI
+name: Feature Branch Tests
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+    paths-ignore:
+      - "CHANGELOG.md"
+    branches-ignore:
+      - master
+    tags-ignore:
+      - "*"
 jobs:
   build:
 
@@ -29,5 +28,3 @@ jobs:
     - run: npm ci
     - run: npm run lint    
     - run: npm test
-    - run: npm run build
-    - run: npm run release    
