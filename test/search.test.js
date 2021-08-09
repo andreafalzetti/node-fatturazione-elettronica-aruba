@@ -56,8 +56,7 @@ describe('arubaSearch', () => {
       expect(res).toEqual({
         statusCode: 429,
         success: false,
-        data:
-          '<html><head><title>Too many requests</title></head><body>Stop it</body></html>',
+        data: '<html><head><title>Too many requests</title></head><body>Stop it</body></html>',
         error: 'Cannot fetch data',
       });
     });
