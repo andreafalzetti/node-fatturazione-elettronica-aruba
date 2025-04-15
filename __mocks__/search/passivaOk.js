@@ -1,6 +1,6 @@
 module.exports = {
-  statusCode: 200,
-  body: {
+  status: 200,
+  data: {
     id: '0123456789d6132158591d2d',
     sender: {
       description: 'NODEJS UNIT TEST SRL',

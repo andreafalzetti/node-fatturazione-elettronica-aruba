@@ -1,4 +1,4 @@
-const needle = require('needle');
+const httpClient = require('../lib/http-client');
 const composeUrl = require('../lib/search/composeUrl');
 
 const config = {
@@ -7,7 +7,7 @@ const config = {
 
 const arubaSearch = require('../lib/search/search')(config);
 
-jest.mock('needle');
+jest.mock('../lib/http-client');
 
 const { passivaOk } = require('../__mocks__/search');
 
@@ -41,12 +41,14 @@ describe('arubaSearch', () => {
     });
 
     it('should handle response correctly if Aruba returns 429 with HTML', async () => {
-      const resp = {
-        statusCode: 429,
-        body: `<html><head><title>Too many requests</title></head><body>Stop it</body></html>`,
+      const errorResp = {
+        response: {
+          status: 429,
+          data: `<html><head><title>Too many requests</title></head><body>Stop it</body></html>`,
+        },
       };
 
-      needle.mockResolvedValue(resp);
+      httpClient.get.mockRejectedValue(errorResp);
 
       const res = await arubaSearch({
         type: 'sent',
@@ -62,7 +64,10 @@ describe('arubaSearch', () => {
     });
 
     it('should return the data successfully', async () => {
-      needle.mockResolvedValue(passivaOk);
+      httpClient.get.mockResolvedValue({
+        status: 200,
+        data: passivaOk.data,
+      });
 
       const res = await arubaSearch({
         type: 'sent',
@@ -80,9 +85,7 @@ describe('arubaSearch', () => {
 
     it('should throw an error when there is a network failure', async () => {
       const error = new Error('Network failure');
-      needle.mockImplementation(() => {
-        throw error;
-      });
+      httpClient.get.mockRejectedValue(error);
       expect(
         arubaSearch({
           type: 'sent',
