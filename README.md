@@ -12,10 +12,6 @@ Node.js client to integrate the Aruba API for electronic invoicing ("Fatturazion
 -   Implement MonitorCheck API
 -   Add any new feature introduces by Aruba last minute
 
-## Changes
-
-- v0.5.0: Refactored to use Axios instead of Needle for HTTP requests
-
 ## Links
 
 * Aruba API docs: <https://fatturazioneelettronica.aruba.it/apidoc/docs_EN.html>
