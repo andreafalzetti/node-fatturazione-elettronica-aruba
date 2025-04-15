@@ -1,4 +1,4 @@
-const needle = require('needle');
+const httpClient = require('../lib/http-client');
 const { getFattura } = require('./util');
 const composeUrl = require('../lib/upload/composeUrl');
 
@@ -8,7 +8,7 @@ const config = {
 
 const upload = require('../lib/upload/upload')(config);
 
-jest.mock('needle');
+jest.mock('../lib/http-client');
 
 const token =
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
@@ -32,15 +32,15 @@ describe('upload', () => {
 
   it('should return an error when the auth token is missing from headers', async () => {
     const resp = {
-      statusCode: 200,
-      body: {
+      status: 200,
+      data: {
         uploadFileName: null,
         errorCode: '0900',
         errorDescription: 'AccessToken non valorizzato, key : Authorization',
       },
     };
 
-    needle.mockResolvedValue(resp);
+    httpClient.post.mockResolvedValue(resp);
 
     const res = await upload({ dataFile: 'foo' }, {});
     expect(res).toEqual({
@@ -56,15 +56,15 @@ describe('upload', () => {
 
   it('should return an error when the auth token is corrupted', async () => {
     const resp = {
-      statusCode: 200,
-      body: {
+      status: 200,
+      data: {
         uploadFileName: null,
         errorCode: '0001',
         errorDescription: 'Errore Generico',
       },
     };
 
-    needle.mockResolvedValue(resp);
+    httpClient.post.mockResolvedValue(resp);
 
     const res = await upload(
       { dataFile: 'foo' },
@@ -89,15 +89,15 @@ describe('upload', () => {
 
   it('should return the "uploadFileName" when the invoice is uploaded successfully', async () => {
     const resp = {
-      statusCode: 200,
-      body: {
+      status: 200,
+      data: {
         uploadFileName: 'IT01879020517_aaa6r.xml.p7m',
         errorCode: '0000',
         errorDescription: null,
       },
     };
 
-    needle.mockResolvedValue(resp);
+    httpClient.post.mockResolvedValue(resp);
 
     const res = await upload({ dataFile: samples.ok }, options);
 
@@ -112,15 +112,15 @@ describe('upload', () => {
 
   it('should allow the upload of signed invoices', async () => {
     const resp = {
-      statusCode: 200,
-      body: {
+      status: 200,
+      data: {
         uploadFileName: 'IT01879020517_aabcb.xml.p7m',
         errorCode: '0000',
         errorDescription: null,
       },
     };
 
-    needle.mockResolvedValue(resp);
+    httpClient.post.mockResolvedValue(resp);
 
     const res = await upload({ signed: true, dataFile: samples.ok }, options);
 
@@ -135,15 +135,15 @@ describe('upload', () => {
 
   it('should return an error when the user does not match with the invoice details', async () => {
     const resp = {
-      statusCode: 200,
-      body: {
+      status: 200,
+      data: {
         uploadFileName: null,
         errorCode: '0012',
         errorDescription: 'Errore autenticazione',
       },
     };
 
-    needle.mockResolvedValue(resp);
+    httpClient.post.mockResolvedValue(resp);
 
     const res = await upload(
       { dataFile: samples.errore_autenticazione },
@@ -163,9 +163,7 @@ describe('upload', () => {
 
   it('should throw an error when there is a network failure', async () => {
     const error = new Error('Network failure');
-    needle.mockImplementation(() => {
-      throw error;
-    });
+    httpClient.post.mockRejectedValue(error);
     expect(upload({ dataFile: samples.ok }, options)).rejects.toThrowError();
   });
 

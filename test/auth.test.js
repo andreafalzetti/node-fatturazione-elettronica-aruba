@@ -1,20 +1,22 @@
-const needle = require('needle');
+const httpClient = require('../lib/http-client');
 const arubaAuth = require('../lib/auth')({
   endpoints: { auth: { url: 'https://foo.bar', httpOptions: {} } },
 });
 
-jest.mock('needle');
+jest.mock('../lib/http-client');
 
 describe('arubaAuth', () => {
   describe('signIn', () => {
     it('should return an error when username and password are wrong', async () => {
-      const resp = {
-        body: {
-          error: 'invalid_grant',
-          error_description: 'The user name or password is incorrect.',
+      const errorResp = {
+        response: {
+          data: {
+            error: 'invalid_grant',
+            error_description: 'The user name or password is incorrect.',
+          },
         },
       };
-      needle.mockResolvedValue(resp);
+      httpClient.post.mockRejectedValue(errorResp);
 
       const res = await arubaAuth.signIn({ username: 'foo', password: 'bar' });
 
@@ -31,9 +33,7 @@ describe('arubaAuth', () => {
 
     it('should throw an error when there is a network failure', async () => {
       const error = new Error('Network failure');
-      needle.mockImplementation(() => {
-        throw error;
-      });
+      httpClient.post.mockRejectedValue(error);
       expect(
         arubaAuth.signIn({ username: 'foo', password: 'bar' })
       ).rejects.toThrowError();
@@ -41,7 +41,7 @@ describe('arubaAuth', () => {
 
     it('should return the access_token', async () => {
       const resp = {
-        body: {
+        data: {
           access_token: 'ey10efoo',
           token_type: 'bearer',
           expires_in: 1799,
@@ -52,12 +52,12 @@ describe('arubaAuth', () => {
           '.expires': 'Sun, 18 Nov 2018 07:53:39 GMT',
         },
       };
-      needle.mockResolvedValue(resp);
+      httpClient.post.mockResolvedValue(resp);
       const res = await arubaAuth.signIn({
         username: 'notarealuser',
         password: 'notarealpassword',
       });
-      expect(res).toEqual(Object.assign(resp.body, { success: true }));
+      expect(res).toEqual(Object.assign(resp.data, { success: true }));
     });
 
     it('should should throw if no params are passed', async () => {
@@ -75,9 +75,7 @@ describe('arubaAuth', () => {
 
     it('should throw an error when there is a network failure', async () => {
       const error = new Error('Network failure');
-      needle.mockImplementation(() => {
-        throw error;
-      });
+      httpClient.post.mockRejectedValue(error);
       expect(
         arubaAuth.refreshToken({ refresh_token: 'foo' })
       ).rejects.toThrowError();
@@ -90,7 +88,7 @@ describe('arubaAuth', () => {
 
     it('should return a new access_token', async () => {
       const resp = {
-        body: {
+        data: {
           access_token: 'ey10efoo',
           token_type: 'bearer',
           expires_in: 1799,
@@ -101,11 +99,11 @@ describe('arubaAuth', () => {
           '.expires': 'Sun, 18 Nov 2018 07:53:39 GMT',
         },
       };
-      needle.mockResolvedValue(resp);
+      httpClient.post.mockResolvedValue(resp);
       const res = await arubaAuth.refreshToken({
         refresh_token: 'abc123foo',
       });
-      expect(res).toEqual(Object.assign(resp.body, { success: true }));
+      expect(res).toEqual(Object.assign(resp.data, { success: true }));
     });
   });
 });
