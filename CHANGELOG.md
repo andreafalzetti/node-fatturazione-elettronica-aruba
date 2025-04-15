@@ -1,10 +1,3 @@
-# [0.5.0](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.4.0...0.5.0) (2025-04-15)
-
-
-### Features
-
-* refactor to use axios instead of needle ([a86b741](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/commit/a86b741))
-
 # [0.4.0](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.3.0...0.4.0) (2021-08-09)
 
 
