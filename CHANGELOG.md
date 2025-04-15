@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.4.0...0.4.1) (2025-04-15)
+
+
+### Bug Fixes
+
+* eslint ([1a9b165](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/commit/1a9b1653cffd0d4cccd4cd7b1dd13d5218f3b393))
+
 # [0.4.0](https://github.com/andreafalzetti/node-fatturazione-elettronica-aruba/compare/0.3.0...0.4.0) (2021-08-09)
 
 
