@@ -35,6 +35,5 @@ module.exports = {
       },
     ],
     '@semantic-release/npm',
-    '@semantic-release/git',
   ],
 };
